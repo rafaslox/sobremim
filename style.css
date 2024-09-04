@@ -1,0 +1,663 @@
+<!--- This is the fixed version of my coquette layout! i changed the source for the lace borders of the containers (since the original source got taken down), also fixed the codes for the profile pics mask and every other graphic resource that got deleted is now replaced! however i have not updated the resources section!!! so there might be a lot of broke links that has been taken down by the original creators. in my profile you can find an updated section with all my current resources and bookmarks for codes, grapichs and web materials! --->
+
+<style>
+/* mobile code. don't delete */
+@media (max-width: 600px) {
+    main{
+        max-width: 90%!important;
+    }
+    nav .links{
+       max-width: 90%!important;
+       align: center !important;
+       margin-left: auto !important;
+       margin-right: auto !important;
+}
+    footer{
+       max-width: 90%!important;
+       margin-left: auto !important;
+       margin-right: auto !important;
+}
+    h1{
+        font-size: 30px!important;
+    }
+    body{
+        font-size: 16px!important;
+    }
+    a{
+        font-size: 18px!important;
+    }
+body:before{
+background-size:40%!important;
+}
+}
+</style>
+
+
+
+<style>
+/* fonts */
+    @font-face { font-family: "dreams"; src: url('https://dl.dropbox.com/s/i9lg3nchwvgi6p3/dream.ttf'); }
+    @font-face { font-family: "hearts"; src: url('https://dl.dropbox.com/s/1479f8x52y3z5u4/rainyhearts.ttf'); }
+    @font-face { font-family: "heartache"; src: url('https://dl.dropbox.com/s/v2sscag4tnjgr2c/Helloheartache-ggyP.otf'); }
+     @font-face { font-family: monster;
+src: url(https://dl.dropbox.com/s/130c77g5yd5z1do/MonsterFriendFore.otf); }
+</style>
+
+
+
+<style>
+/*page background */
+body {
+        background:url('https://pbs.twimg.com/media/FA8CyU_XMAMQqZ4?format=jpg&name=240x240');
+}
+</style>
+
+
+
+<style>
+/* cursors (source: http://www.rw-designer.com/cursor-set/littlebunny2-mimidestino) */
+a:hover{
+    cursor: url('https://64.media.tumblr.com/798fb85e8334ad49beadcec5e2422e1d/e607e0ffc52ca267-19/s75x75_c1/637b1c8f639ed9cb92f23b481633f804843cfa8c.gifv'), auto;
+}
+* { 
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=94536'), auto; 
+}
+</style>
+
+
+<style>
+/* This is the loading image when someone clicks on your profile.
+You can search for 'transparent loading screen gif' on google or giphy.com and select one that fits your style.
+The background-size code will change the size of it. Remember to test it out on your phone/tablet 
+and change the background-size in the mobile code.*/
+
+body:before {
+	content: " ";
+	height: 100vh;
+	width: 100vw;
+	display: block;
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	z-index: 100;
+	background-image: url('https://pixelbank.neocities.org/text/809b271c.gif');
+	background-size: 9%;
+	background-repeat: no-repeat;
+    background-position:center;
+    background-color: #FEF1F0;
+	animation: yourAnimation 2s ease 0s 1 normal forwards;
+	pointer-events: none;
+}
+@keyframes yourAnimation { 0.0%{ opacity: 1;} 75%{ opacity: 1; } 100%{ opacity: 0;} } 
+</style>
+
+
+
+
+<style>
+
+
+a:hover{text-decoration: underline;}
+h2, h3, h4, h5{color: black !important;} /* headings*/
+a{color: black !important; } /* color of links */
+p, b, .count {color: black !important;} /* color of text */
+.profile .friends .person p{color: #e2a99c !important;} /* color of names and friends counter */
+nav label{color: black !important;} /* color of search */
+.section h4 {color: #c2c9a7 !important;} /* aboutme & want2meet headings */
+.blurbs .heading {display:none;} /* hides the blurbs title. if you want it to show, replace with the code: color: var(--headers) !important;  */
+
+
+nav .top{
+background-color: transparent !important;
+border: none;
+margin: 30px 0;
+color: black;
+}
+
+
+.logout-btn, .logout-form {
+    font-family: hearts;
+    text-decoration: underline;
+    background-color: none !important;
+    border: none !important;
+    color: black !important;
+    display: inline-block;
+    font-size: 1.1em !important;
+}
+
+
+nav .links{
+   background-color: transparent !important;
+   border: 10px solid black;
+   border-image: url("https://foollovers.com/mat/baf/frill/fr32-015-a.gif") 9 fill round;
+    font-family: hearts;
+    text-align: center;
+    margin-bottom: 10px !important;
+}
+
+nav .top a, nav .links a{
+    background: transparent !important;
+    color: black;
+    text-shadow: none !important;
+    text-decoration: none !important;
+    font-size: 1.5em;
+}
+
+
+/* this is the line that appears between links in the header and footer.
+you can add an emoji or symbol instead of the default line it has */
+
+nav .links li:not(:last-child)::after,
+footer .links li:not(:last-child)::after{
+    content: " ♡ " !important;
+    color: black;
+}
+
+
+/* this is the spacehey logo color. 
+to change the color refer to " https://codepen.io/sosuke/pen/Pjoqqp " and replace the filter property values */
+
+nav img.logo{
+    filter: invert(61%) sepia(7%) saturate(2917%) hue-rotate(315deg) brightness(111%) contrast(90%);
+    width: 165px !important;
+    height: 42px;
+}
+
+
+main{
+    background-color: white;
+    background-image: url('https://colorate.azurewebsites.net/SwatchColor/FFFFFF');
+    background-size: 100%100%;
+    background-repeat: no-repeat;
+   border: 9px solid;
+   border-image: url("https://64.media.tumblr.com/6f0c2efb2b0902a5907c60c9d1dcad9e/9b9e0ed89a039867-11/s75x75_c1/90da82e9674eafbcc1f84f71303f353726a700b5.pnj") 8 fill round;
+    width:810px;
+    height:490px;
+    overflow-y: scroll;
+    margin: auto;
+    background-color: white;
+}
+
+/* this is your name/username?. this text has a floating effect */
+h1{
+    text-shadow: -1px 0 #7e6446, 0 1px #7e6446, 1px 0 #7e6446, 0 -1px #7e6446, 0 0;
+    color: white;
+    font-family: "hearts";
+    font-style: italic;
+    font-size:50px!important;
+    font-weight: bold;
+    text-align: center;
+    text-transform: lowercase;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+
+
+/* this is the scrollbar of the profile container. do not edit this part! be careful (source: https://ishimori.crd.co/) */
+
+::-webkit-scrollbar {
+width: 16px
+}
+ 
+::-webkit-scrollbar:horizontal {
+height: 17px
+}
+ 
+::-webkit-scrollbar-corner {
+background: #eee
+}
+ 
+::-webkit-scrollbar-track:vertical {
+background: linear-gradient(90deg, #e5e5e5, #f0f0f0 20%)
+}
+ 
+::-webkit-scrollbar-track:horizontal {
+background: linear-gradient(180deg, #e5e5e5, #f0f0f0 20%)
+}
+ 
+::-webkit-scrollbar-thumb {
+border: 1.5px solid #888;
+border-radius: 3px;
+box-shadow: inset 0 -1px 1px #fff, inset 0 1px 1px #fff;
+background-color: #eee;
+}
+ 
+::-webkit-scrollbar-thumb:vertical {
+background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAIAAADpZ+PpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADrSURBVChTTc5LboJQGAXguyoCu4ERCzAGlRk7UOwGWIDh0s4M4kxb06RSq/jAB6AxJkJ4lTDrue3AnvyzP+fLId+/yfM8juP7PQmCCOf7B3e+ZD+O40RRVFW12VQUpd3r9U3T2m4OpKoqWZYNwzBZLEqfh0N7NnvfrPcEWlEUWZb9mWF4Ph6D0ylcLbfM5HkeJrhGA2hb15/QXnv+w7RYXsDatjOdvnmrHSnLEizMNE2v11sUXQBCnn98kbquBUGQJAlmq9WB2e3qg4HJdqKkaRql1HGc0WgMcDJ5dd0F24kediZJ8t/ELT69H+8py0CYSIO5AAAAAElFTkSuQmCC") no-repeat 50%, linear-gradient(90deg, #eee 45%, #ddd 0, #bbb)
+}
+ 
+::-webkit-scrollbar-thumb:horizontal {
+background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJCAYAAAALpr0TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADcSURBVChTNZBLqoUwEEQrURQUxZGCvy24ACfiityJi7tv8GauQoPxk5tquA2RQ9vVVYk6z9NZaxFFEe77htYazjk8z4MwDIVZ+rourOuKaZrwvi+WZcE8z1BKCbPPCjk4DAO2bRP1OI7wLiL6Mbd7J408z1GWpQwWRYGqqiQG+03TgMu0MacfUN4qANmn8UOv9MjW3sKaSm7iIdOSlziOQ3LScd93aPonSYK6riVLlmVo21aYfVqzND9pmqLrOlGT+76XbcxLZkb19/l3fEP+oF0cx8KMEASBsDEGX2/CgZCHkg+8AAAAAElFTkSuQmCC") no-repeat 50%, linear-gradient(180deg, #eee 45%, #ddd 0, #bbb)
+}
+ 
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement {
+display: block
+}
+ 
+::-webkit-scrollbar-button:vertical {
+height: 17px
+}
+ 
+::-webkit-scrollbar-button:vertical:start:decrement {
+background: white;
+background-image: url("https://cdn.discordapp.com/attachments/904308736712138793/1001299199633141851/download.png");
+background-repeat: no-repeat;
+background-position: center;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+ 
+::-webkit-scrollbar-button:vertical:start:increment {
+display: none;
+}
+ 
+::-webkit-scrollbar-button:vertical:end:decrement {
+display: none;
+}
+ 
+::-webkit-scrollbar-button:vertical:end:increment {
+background: white;
+background-image: url("https://cdn.discordapp.com/attachments/904308736712138793/1001299200052576387/87ae92e1-3894-4469-b1b9-aedf5f04975c.png");
+background-repeat: no-repeat;
+background-position: center;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+ 
+
+/* font family for the headers, navigtion links, links, body text */
+
+h2, h3, h4, h5{
+    font-family: "hearts";
+    font-size: 18px!important;
+    font-weight: semi-bold; }
+ 
+a{
+    font-family: hearts !important;	
+    font-size: 14px !important;
+    font-weight: 1; }
+ 
+p, b, nav label, .section{ 
+    font-family: "hearts";
+    font-size: 16px!important;
+    font-weight: semi-bold; }
+
+
+/* the online symbol and text */
+
+.online{
+    color: black !important;
+    text-transform: lowercase;
+    text-align: left;
+} 
+.online img{
+    content: url("https://64.media.tumblr.com/85143b2850e75f47d3a511d07c9c3791/b71077d70ee5b59c-21/s75x75_c1/41f78bb60ed65f9a61da1116da92e70fcbbc404d.gifv") !important;
+    animation-name: none;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+/* your profile picture */
+    .profile-pic {
+-webkit-mask-image: url(https://64.media.tumblr.com/21537f823a9682455940164951cd4f70/a13f6b3efb69d983-60/s250x400/4513c30e7c3d485e14827bda68c9750d7b2d80e4.pnj);
+-webkit-mask-size: 100%;
+-webkit-mask-repeat: no-repeat;
+-webkit-mask-position: center;
+width: 160px !important;
+height: auto;}
+
+
+
+/* contact table */
+    .contact .heading{
+       background-color: #eee4dc !important; }
+
+    .contact{       
+       border: 4px solid #eee4dc !important;   
+       border-radius: 3px; }
+
+.contact img {
+    filter: saturate(0%)!important;
+}
+
+/* this is the custom contact code (graphics source: https://engrampixel.tumblr.com/) */
+.contact .inner a img {
+    font-size: 0!important;
+}
+.contact .inner a img:before {
+    font-size: 1em;
+    display: block;
+}
+.contact .inner .f-row:nth-child(1) .f-col:nth-child(1) a:before {
+	/* add to friends */
+	content: url("https://64.media.tumblr.com/a5f547614d426f13d1e6b9e5aae0a74c/0943507cd3c89989-e7/s75x75_c1/9c20ed5386a6f94dcfe7f841d094a4d0906a2b78.gifv");
+	font-size: 14px;
+	color: var(--text);
+}
+.contact .inner .f-row:nth-child(1) .f-col:nth-child(2) a:before {
+	/* add to favorites */
+	content: url("https://64.media.tumblr.com/eae8a023d4f2aafc6087bf89a4f348c5/273b4c4e0e95e923-f8/s75x75_c1/01b44ef36548ff7efd15d419722a910c67691b8f.gifv");
+	font-size: 14px;
+	color: var(--text);
+}
+.contact .inner .f-row:nth-child(2) .f-col:nth-child(1) a:before {
+	/* Send Message */
+	content: url("https://64.media.tumblr.com/f29c98a3688b42cc1fe5a2039356b2dd/0943507cd3c89989-a9/s75x75_c1/65f84477ea238d94fc176a95afd3c43aba24ea9a.gifv");
+	font-size: 14px;
+	color: var(--text);
+}
+.contact .inner .f-row:nth-child(2) .f-col:nth-child(2) a:before {
+	/* forward to friend */
+	content: url("https://64.media.tumblr.com/0b9143c7669c0a8407e1b9b8bf1f9728/4508feb5373af11c-4b/s75x75_c1/c350b718cfd20e73f1689554aefe090c96231e72.gifv");
+	font-size: 14px;
+	color: var(--text);
+}
+.contact .inner .f-row:nth-child(3) .f-col:nth-child(1) a:before {
+	/* instant message */
+	content: url("https://64.media.tumblr.com/bab33d69d6bc6233e0d3b7f7d8346654/273b4c4e0e95e923-ed/s75x75_c1/7d781478594fdd684d15789e4d57c58b642647da.gifv");
+	font-size: 14px;
+	color: var(--text);
+}
+.contact .inner .f-row:nth-child(3) .f-col:nth-child(2) a:before {
+	/* block user */
+	content: url("https://64.media.tumblr.com/b505e1d1d6a926e8b713462660a59fc7/35dfd6263639c3e0-6f/s75x75_c1/5d385602d987a1e35e543c973e60dc0663846a33.gifv");
+	font-size: 14px;
+	color: var(--text);
+}
+.contact .inner .f-row:nth-child(4) .f-col:nth-child(1) a:before {
+	/* add to group */
+	content: url("https://64.media.tumblr.com/702ae08487938a9ead9ef8011fd8ad9c/273b4c4e0e95e923-21/s75x75_c1/260428c66fcdcf765804040374aa27d24639f33a.gifv");
+	font-size: 14px;
+	color: var(--text);
+}
+.contact .inner .f-row:nth-child(4) .f-col:nth-child(2) a:before {
+	/* report user */
+	content: url("https://64.media.tumblr.com/9c1326c0b930d9109dc5aafd7ab29374/4508feb5373af11c-df/s75x75_c1/6cf99b7497213f5590aa54ebc1226aa2a3e28783.gifv");
+	font-size: 14px;
+	color: var(--text);
+}
+
+
+/*  url info link to profile  */
+    .url-info{
+        border: 4px solid #dadfca !important;   
+        border-radius: 3px;
+        background-color: #dadfca; }
+
+
+
+/*  the interest table  */
+    .table-section{
+       border: none !important;
+       background-color:transparent!important;
+       text-align: left; }
+
+
+    .details-table{
+       border: 4px solid #eee4dc !important;   
+       border-radius: 3px !important;
+       background-color: white !important;
+       padding: none !important;
+       border-spacing: 4px !important; 
+       border-collapse: separate !important; }
+
+    .details-table td{
+       display:default;
+       background-color: #f7f3e4 !important;
+       border: none !important;  }
+
+    .details-table td:first-child{
+       width: 35%;
+       background-color: #f7f3e4 !important;
+       text-align:left; }
+
+
+    .table-section .heading{
+       background-color: #eee4dc !important;
+       border: 2px solid #eee4dc !important;   
+       border-radius: 3px !important;
+       text-align:left; 
+       margin-bottom: 4px; }
+
+
+
+:root {
+    --topic1: "♡ General";
+    --topic2: "♡ Music";
+    --topic3: "♡ Movie";
+    --topic4: "♡ TV";
+    --topic5: "♡ Books";
+    --topic6: "♡ lomls!";
+
+ }
+
+.table-section:not(:last-child) .details-table tr td:first-child p{color:transparent !important;text-shadow: none !important;letter-spacing: -100px;}
+
+.details-table tr td:first-child p::after{
+   color:black !important;
+   letter-spacing:normal !important;
+   
+}
+
+.table-section:not(:last-child) .details-table tr:nth-child(1) td:first-child p::after{
+    content: var(--topic1);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(2) td:first-child p::after{
+    content: var(--topic2);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(3) td:first-child p::after{
+    content: var(--topic3);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(4) td:first-child p::after{
+    content: var(--topic4);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(5) td:first-child p::after{
+    content: var(--topic5);
+}
+.table-section:not(:last-child) .details-table tr:nth-child(6) td:first-child p::after{
+    content: var(--topic6);
+}
+
+/* the links table */
+.table-section:nth-of-type(even) td:first-child img {
+    filter: none !important;
+    transform: scale(0.8) !important;
+}
+
+
+/* that @username is your friend rectangle ;; */
+.profile-info {
+    border: solid #f7f3e4 2px !important;
+    border-radius: 3px;
+    background-color: #f7f3e4 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 1px !important;
+    margin-bottom: 10px;
+}
+
+
+/* the blurbs section */
+.blurbs p {
+   text-align: left; 
+}
+
+.blurbs a {
+   text-align: center !important;
+   color: #c2c9a7 !important;
+}
+
+
+.section h4 {
+    text-align: left !important;
+}
+
+
+/* blogs section */
+.blog-preview {
+      line-height: 0.75;
+}
+
+.blog-preview .pinned .icon {
+    content: url('https://pixels.crd.co/assets/images/gallery138/3e1e41e7.gif?v=b3554822');
+    width: 10px;
+    height: 10px;
+    filter: none !important;
+    transform: none !important;
+}
+
+
+
+/* the friends section and comments lace containers (headers only) */
+.friends .heading{
+   background-color: transparent !important;
+   border: 10px solid black;
+   border-image: url("https://foollovers.com/mat/baf/frill/fr32-015-a.gif") 9 fill round;
+    text-align: left;
+    padding:10px;
+}
+
+/*  your friends' profile pics shape (source: https://ishimori.crd.co/#codes)  */
+    .profile .friends .person img:not(.icon) {
+        -webkit-mask-image: url(https://64.media.tumblr.com/a3933905fc43763b859df986790f7cfc/a13f6b3efb69d983-75/s250x400/e093c1488a8f7800c9a96a2aa980cbc6e9fece92.pnj);
+        -webkit-mask-size: 100%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        width: 180px;
+        height: auto;
+}
+
+
+/* COMMENTS  */
+.profile .right .comments-table{
+	height:390px;
+	overflow-y:scroll;
+	display:block;
+	background-color: white;
+	border: 4px solid #eee4dc !important;   
+        border-radius: 3px !important;
+        padding: none !important;
+        border-spacing: 4px !important; 
+        border-collapse: separate !important;
+}
+
+
+.comments-table td{
+       background-color:white !important;
+}
+
+
+.comments-table td:first-child img:not(.icon) {
+    background-color: white !important;
+    border: 7px solid black;
+    border-image: url("https://media.discordapp.net/attachments/826854899013648384/839700444375810078/tumblr_inline_o98n9dbCl61u2r0ws_540_1_2.png") 8 fill round;
+    width: 90px;
+    max-width: 100%;
+    max-height: 200px;
+}
+
+.profile .right .comments-table td:nth-child(2) {
+	border: none !important;
+}
+
+.profile .right .comments-table td:nth-child(1) {
+	background-color: white !important;
+        border: none !important;
+}
+
+
+.comment-replies{
+	border: 0 !important;
+	border-left: 5px solid #f7f3e4 !important;
+}
+
+main:not(.right) .icon {
+    filter: hue-rotate(-30deg) sepia(50%) saturate(45%) !important;
+    transform: scale(0.7) !important;
+}
+
+
+button, [type="button"], [type="reset"], [type="submit"] {
+       background-color: #f7f3e4 !important;
+       border: gray solid 1px;
+       border-radius: 3px;
+       color: black;
+       text-align: center;
+       font-family: 'hearts' !important;
+}
+
+footer{
+    margin-top:10px;
+    background-color: transparent !important;
+    border: none !important;
+    text-align: center;
+    color: #e3dada !important;
+}
+
+footer p {
+   color: #c2a9a9 !important;
+}
+
+footer a {
+   color: #c2a9a9 !important;
+}
+
+footer .links li:not(:last-child)::after{
+   color: #c2a9a9 !important;
+}
+
+footer .links{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.ceresites{
+    padding: 5px;
+    bottom: 10px;
+    background: transparent;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+</style>
+
+
+<!-- custom emotes -->
+<style>
+@import url('https://gistcdn.githack.com/adrianmgg/0478d4a6926a271be35eb09e94f689fa/raw/spacehey_emotes.css');
+
+[data-emote="melody-happy"] { --emote-url: url("https://64.media.tumblr.com/43100c515c50711e541d0cbbdc2734f0/a5d950e08fe7c109-2e/s75x75_c1/b4304404706226eff2a93b5621ba15ebf408a55a.gifv"); }
+</style>
+
+
+<style>
+.GeneratedMarquee {
+font-family:'hearts';
+font-size:16px !important;
+font-style:italic;
+line-height:1.3em;
+text-align:center;
+color:#7e6446;
+padding:none;
+width: 60% !important;
+}
+
+</style>
